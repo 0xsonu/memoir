@@ -2,6 +2,10 @@
   "name": "memoir",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Sonu Kumar",
+    "url": "https://github.com/SonuKumar81800"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
