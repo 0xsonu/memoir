@@ -1,9 +1,25 @@
 import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter as FontSans } from "next/font/google"
 import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import localFont from "next/font/local"
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { TailwindIndicator } from "@/components/TailwindIndicator";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const fontHeading = localFont({
+  src: "../assets/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-heading",
+})
+
+interface RootLayoutProps {
+  children: React.ReactNode
+}
 
 export const metadata: Metadata = {
   title: {
@@ -55,12 +71,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head />
+      <body className={cn(
+        "bg-background min-h-screen font-sans antialiased",
+        fontSans.variable,
+        fontHeading.variable
+      )}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <TailwindIndicator />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
