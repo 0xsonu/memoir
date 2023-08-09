@@ -1,3 +1,4 @@
+
 export type SiteConfig = {
   name: string;
   description: string;
@@ -8,3 +9,14 @@ export type SiteConfig = {
     github: string;
   };
 };
+
+
+export type NavItem = {
+  title: string
+  href: string
+  disabled?: boolean
+}
+
+export type NavConfig = {
+  mainNav: NavItem[]
+}
