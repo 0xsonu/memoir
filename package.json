@@ -9,8 +9,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "turbo": "next dev --turbo",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
@@ -36,12 +38,16 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.0",
+    "@commitlint/config-conventional": "^17.7.0",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-tailwindcss": "^3.13.0",
+    "husky": "^8.0.0",
     "prettier": "^3.0.1",
-    "prettier-plugin-tailwindcss": "^0.4.1"
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "pretty-quick": "^3.1.3"
   }
 }
