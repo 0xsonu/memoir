@@ -37,7 +37,7 @@ export function MainNav({ items, children }: MainNavProps) {
                   key={index}
                   href={item.disabled ? "" : item.href}
                   className={
-                    cn("flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm",
+                    cn("hover:text-foreground/80 flex items-center text-lg font-medium transition-colors sm:text-sm",
                       item.href.startsWith(`/${segment}`) ? "text-foreground" : "text-foreground/60",
                       item.disabled && "cursor-not-allowed opacity-80"
                     )}
@@ -51,7 +51,7 @@ export function MainNav({ items, children }: MainNavProps) {
       }
       {/* Mobile navigation menu */}
       <button
-        className="flex item-center space-x-2 md:hidden"
+        className="item-center flex space-x-2 md:hidden"
         onClick={() => setMobileMenu(!mobileMenu)}
       >
         {
