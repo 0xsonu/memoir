@@ -1,4 +1,4 @@
-import { PackageCheck, X, type LucideIcon } from 'lucide-react';
+import { PackageCheck, X, type LucideIcon, SunMedium, Moon, Laptop } from 'lucide-react';
 
 
 export type Icon = LucideIcon
@@ -6,5 +6,8 @@ export type Icon = LucideIcon
 
 export const Icons = {
   logo: PackageCheck,
-  close: X
+  close: X,
+  sun: SunMedium,
+  moon: Moon,
+  laptop: Laptop
 }

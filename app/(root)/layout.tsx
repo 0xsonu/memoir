@@ -1,4 +1,5 @@
 import { MainNav } from "@/components/MainNav"
+import { ThemeManager } from "@/components/ThemeManager"
 import { buttonVariants } from "@/components/ui/button"
 import { navConfig } from "@/config/nav"
 import { cn } from "@/lib/utils"
@@ -16,19 +17,24 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         <div className="flex h-20 items-center justify-between py-6">
           {/* main nav bar */}
           <MainNav items={navConfig.mainNav} />
-          <nav>
-            <Link
-              href="/login"
-              className={cn(
-                buttonVariants({
-                  variant: "secondary", size: "sm"
-                }),
-                "px-4"
-              )}
-            >
-              Login
-            </Link>
-          </nav>
+
+          {/* Theme button */}
+          <div className="flex gap-5">
+            <ThemeManager />
+            <nav>
+              <Link
+                href="/login"
+                className={cn(
+                  buttonVariants({
+                    variant: "secondary", size: "sm"
+                  }),
+                  "px-4"
+                )}
+              >
+                Login
+              </Link>
+            </nav>
+          </div>
         </div>
       </header>
       <main className="flex-1">{children}</main>
