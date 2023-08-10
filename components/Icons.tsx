@@ -1,7 +1,7 @@
 import {
   type LucideIcon, type LucideProps,
   PackageCheck,
-  X, SunMedium, Moon, Laptop, ChevronLeft, Loader2
+  X, SunMedium, Moon, Laptop, ChevronLeft, Loader2, Settings, CreditCard, FileText, User
 } from 'lucide-react';
 
 
@@ -16,6 +16,10 @@ export const Icons = {
   laptop: Laptop,
   chevronLeft: ChevronLeft,
   spinner: Loader2,
+  settings: Settings,
+  billing: CreditCard,
+  post: FileText,
+  user: User,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
