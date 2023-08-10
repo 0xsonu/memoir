@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/Button"
+import { buttonVariants } from "@/components/ui/Button_varient"
 import { Icons } from "@/components/Icons"
 import { UserAuthForm } from "@/components/UserAuthForm"
 

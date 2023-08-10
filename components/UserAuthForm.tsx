@@ -9,7 +9,7 @@ import * as z from "zod"
 
 import { cn } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations/auth"
-import { buttonVariants } from "@/components/ui/Button"
+import { buttonVariants } from "@/components/ui/Button_varient"
 import { Input } from "@/components/ui/Input"
 import { Label } from "@/components/ui/Label"
 import { toast } from "@/components/ui/useToast"

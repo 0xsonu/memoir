@@ -1,4 +1,4 @@
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/Icons"
 import type { Icon } from "lucide-react"
 import { User } from "@prisma/client"
 
