@@ -1,6 +1,6 @@
 import { MainNav } from "@/components/MainNav"
 import { ThemeManager } from "@/components/ThemeManager"
-import { buttonVariants } from "@/components/ui/Button_varient"
+import { buttonVariants } from "@/components/ui/Button"
 import { navConfig } from "@/config/nav"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
