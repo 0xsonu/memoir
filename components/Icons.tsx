@@ -1,7 +1,7 @@
 import {
   type LucideIcon, type LucideProps,
-  PackageCheck,
-  X, SunMedium, Moon, Laptop, ChevronLeft, Loader2, Settings, CreditCard, FileText, User
+  PackageCheck, File, Image,
+  X, SunMedium, Moon, Laptop, ChevronLeft, Loader2, Settings, CreditCard, FileText, User, ChevronRight, Trash, MoreVertical, AlertTriangle, ArrowRight, HelpCircle, Plus, Pizza, Twitter, Check
 } from 'lucide-react';
 
 
@@ -20,6 +20,18 @@ export const Icons = {
   billing: CreditCard,
   post: FileText,
   user: User,
+  chevronRight: ChevronRight,
+  trash: Trash,
+  page: File,
+  media: Image,
+  ellipsis: MoreVertical,
+  add: Plus,
+  warning: AlertTriangle,
+  arrowRight: ArrowRight,
+  help: HelpCircle,
+  pizza: Pizza,
+  twitter: Twitter,
+  check: Check,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"
