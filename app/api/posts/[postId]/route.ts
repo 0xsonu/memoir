@@ -1,5 +1,6 @@
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
+import { postPatchSchema } from "@/lib/validations/post"
 import { getServerSession } from "next-auth"
 import * as z from "zod"
 
@@ -10,12 +11,7 @@ const routeContextSchema = z.object({
   }),
 })
 
-const postPatchSchema = z.object({
-  title: z.string().min(3).max(128).optional(),
 
-  // TODO: Type this properly from editorjs block types?
-  content: z.any().optional(),
-})
 
 export async function DELETE(
   req: Request,
