@@ -2,6 +2,7 @@ import { MainNav } from "@/components/MainNav"
 import { ThemeManager } from "@/components/ThemeManager"
 import { buttonVariants } from "@/components/ui/Button"
 import { navConfig } from "@/config/nav"
+import { getCurrentUser } from "@/lib/session"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 
@@ -11,6 +12,8 @@ interface RootLayoutProps {
 }
 
 export default async function RootLayout({ children }: RootLayoutProps) {
+  const user = await getCurrentUser()
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="bg-background container z-40">
@@ -21,19 +24,33 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           {/* Theme button */}
           <div className="flex gap-5">
             <ThemeManager />
-            <nav>
-              <Link
-                href="/login"
-                className={cn(
-                  buttonVariants({
-                    variant: "secondary", size: "sm"
-                  }),
-                  "px-4"
-                )}
-              >
-                Login
-              </Link>
-            </nav>
+            {
+              user ? (<nav>
+                <Link
+                  href="/dashboard"
+                  className={cn(
+                    buttonVariants({
+                      variant: "secondary", size: "sm"
+                    }),
+                    "px-4"
+                  )}
+                >
+                  Dashboard
+                </Link>
+              </nav>) : (<nav>
+                <Link
+                  href="/login"
+                  className={cn(
+                    buttonVariants({
+                      variant: "secondary", size: "sm"
+                    }),
+                    "px-4"
+                  )}
+                >
+                  Login
+                </Link>
+              </nav>)
+            }
           </div>
         </div>
       </header>
